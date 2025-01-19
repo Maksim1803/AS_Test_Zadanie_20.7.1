@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/my_text"
+        android:textColor="@color/colorRed"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/CardView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="@dimen/marginTop_CardView"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ezio_auditore"
+        android:adjustViewBounds="true"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+
+        />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AppCompatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginTop_textView"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:onClick="onClickToast2"
+        android:text="@string/text_on_button_2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customCardView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_margin="@dimen/marginTop_CardView"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/AppCompatButton"
+        app:layout_constraintStart_toStartOf="@+id/AppCompatButton"
+        app:layout_constraintTop_toBottomOf="@+id/AppCompatButton">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rectangle"
+            android:scaleType="fitCenter"
+            app:cardElevation="15dp"
+            android:src="@drawable/ezio_auditore"
+            app:layout_constraintEnd_toEndOf="@+id/AppCompatButton"
+            app:layout_constraintStart_toStartOf="@+id/AppCompatButton"
+            app:layout_constraintTop_toBottomOf="@+id/AppCompatButton"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
