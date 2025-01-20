@@ -30,28 +30,28 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_margin="@dimen/marginTop_CardView"
+        android:layout_marginBottom="10dp"
         android:clipToOutline="true"
         android:outlineProvider="background"
-        android:layout_marginBottom="10dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/ezio_auditore"
-        android:adjustViewBounds="true"
-        app:cardElevation="15dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ezio_auditore"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
 
-        />
+            />
     </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -74,22 +74,20 @@
         android:layout_margin="@dimen/marginTop_CardView"
         app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="20dp"
-        android:elevation="15dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@+id/AppCompatButton"
         app:layout_constraintStart_toStartOf="@+id/AppCompatButton"
         app:layout_constraintTop_toBottomOf="@+id/AppCompatButton">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="20dp"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:background="@drawable/rectangle"
             android:scaleType="fitCenter"
-            app:cardElevation="15dp"
             android:src="@drawable/ezio_auditore"
+            app:cardCornerRadius="25dp"
             app:layout_constraintEnd_toEndOf="@+id/AppCompatButton"
             app:layout_constraintStart_toStartOf="@+id/AppCompatButton"
             app:layout_constraintTop_toBottomOf="@+id/AppCompatButton"
